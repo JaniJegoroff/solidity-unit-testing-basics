@@ -3,7 +3,7 @@
   "name": "test",
   "version": "1.0.0",
   "private": true,
-  "description": "Basic smart contract unit testing examples in Solidity using Truffle, Hardhat and Foundry.",
+  "description": "Basic smart contract unit testing using Truffle.",
   "devDependencies": {
     "@openzeppelin/contracts": "^4.7.3",
     "ganache": "^7.5.0",
