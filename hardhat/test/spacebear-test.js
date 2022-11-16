@@ -12,13 +12,13 @@ describe('Spacebear', () => {
     return { spacebearInstance };
   }
 
-  it('should return correct contract name', async () => {
+  it('should return contract name', async () => {
     const { spacebearInstance } = await loadFixture(deploySpacebearAndMintTokenFixture);
 
     expect(await spacebearInstance.name()).to.equal('Spacebear');
   });
 
-  it('should return correct token URI', async () => {
+  it('should return token URI', async () => {
     const { spacebearInstance } = await loadFixture(deploySpacebearAndMintTokenFixture);
 
     const expectedTokenURI = 'https://ethereum-blockchain-developer.com/2022-06-nft-truffle-hardhat-foundry/nftdata/spacebear_1.json';
