@@ -1,7 +1,7 @@
-require("@nomicfoundation/hardhat-toolbox");
+require('@nomicfoundation/hardhat-toolbox');
 
-const fs = require("fs");
-let mnemonic = fs.readFileSync(".secret").toString().trim();
+const fs = require('fs');
+let mnemonic = fs.readFileSync('.secret').toString().trim();
 let infuraProjectID = fs.readFileSync(".infura").toString().trim();
 
 /** @type import('hardhat/config').HardhatUserConfig */
@@ -18,7 +18,7 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: fs.readFileSync(".etherscan").toString().trim()
+    apiKey: fs.readFileSync('.etherscan').toString().trim()
   },
-  solidity: "0.8.17",
+  solidity: '0.8.17',
 };
