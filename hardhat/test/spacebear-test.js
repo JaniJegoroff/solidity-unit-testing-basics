@@ -7,7 +7,7 @@ describe('Spacebear', () => {
     const Spacebear = await hre.ethers.getContractFactory('Spacebear');
     const spacebearInstance = await Spacebear.deploy();
 
-    const [owner, otherAccount] = await ethers.getSigners();
+    const [_owner, otherAccount] = await ethers.getSigners();
     await spacebearInstance.safeMint(otherAccount.address, 'spacebear_1.json');
     return { spacebearInstance };
   }
@@ -20,7 +20,6 @@ describe('Spacebear', () => {
 
   it('should return correct token URI', async () => {
     const { spacebearInstance } = await loadFixture(deploySpacebearAndMintTokenFixture);
-    const [_owner, otherAccount] = await ethers.getSigners();
 
     const expectedTokenURI = 'https://ethereum-blockchain-developer.com/2022-06-nft-truffle-hardhat-foundry/nftdata/spacebear_1.json';
     expect(await spacebearInstance.tokenURI(0)).to.equal(expectedTokenURI);
