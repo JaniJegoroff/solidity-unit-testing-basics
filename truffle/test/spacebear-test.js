@@ -2,13 +2,17 @@ const Spacebear = artifacts.require('Spacebear');
 const truffleAssert = require('truffle-assertions');
 
 contract('Spacebear', (accounts) => {
+  let spacebearInstance;
+
+  before(async () => {
+    spacebearInstance = await Spacebear.deployed();
+  });
+
   it('should return correct contract name', async () => {
-    const spacebearInstance = await Spacebear.deployed();
     assert.equal(await spacebearInstance.name(), 'Spacebear');
   });
 
   it('should credit NFT to a correct account', async () => {
-    const spacebearInstance = await Spacebear.deployed();
     const txResult = await spacebearInstance.safeMint(accounts[1], 'spacebear_1.json');
     truffleAssert.eventEmitted(txResult, 'Transfer', {from: '0x0000000000000000000000000000000000000000',
                                                       to: accounts[1],
