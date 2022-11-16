@@ -12,6 +12,12 @@ describe('Spacebear', () => {
     return { spacebearInstance };
   }
 
+  it('should return correct contract name', async () => {
+    const { spacebearInstance } = await loadFixture(deploySpacebearAndMintTokenFixture);
+
+    expect(await spacebearInstance.name()).to.equal('Spacebear');
+  });
+
   it('should mint a token', async () => {
     const { spacebearInstance } = await loadFixture(deploySpacebearAndMintTokenFixture);
     const [_owner, otherAccount] = await ethers.getSigners();
