@@ -18,6 +18,14 @@ describe('Spacebear', () => {
     expect(await spacebearInstance.name()).to.equal('Spacebear');
   });
 
+  it('should return correct token URI', async () => {
+    const { spacebearInstance } = await loadFixture(deploySpacebearAndMintTokenFixture);
+    const [_owner, otherAccount] = await ethers.getSigners();
+
+    const expectedTokenURI = 'https://ethereum-blockchain-developer.com/2022-06-nft-truffle-hardhat-foundry/nftdata/spacebear_1.json';
+    expect(await spacebearInstance.tokenURI(0)).to.equal(expectedTokenURI);
+  });
+
   it('should mint a token', async () => {
     const { spacebearInstance } = await loadFixture(deploySpacebearAndMintTokenFixture);
     const [_owner, otherAccount] = await ethers.getSigners();
