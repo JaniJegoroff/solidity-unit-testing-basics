@@ -28,7 +28,7 @@ contract SpacebearTest is Test {
 
     function testMintTokenNotOwner() public {
         vm.startPrank(address(0x1));
-        vm.expectRevert("Ownable: caller is not the owner");
+        vm.expectRevert('Ownable: caller is not the owner');
         spacebear.safeMint(address(0x1), 'spacebear_1.json');
         vm.stopPrank();
     }
