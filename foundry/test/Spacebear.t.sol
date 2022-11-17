@@ -22,14 +22,15 @@ contract SpacebearTest is Test {
 
     function testTokenURI() public {
         spacebear.safeMint(msg.sender, 'spacebear_1.json');
-        string memory expectedTokenName = 'https://ethereum-blockchain-developer.com/2022-06-nft-truffle-hardhat-foundry/nftdata/spacebear_1.json';
-        assertEq(spacebear.tokenURI(0), expectedTokenName);
+        string memory expectedTokenURI = 'https://ethereum-blockchain-developer.com/2022-06-nft-truffle-hardhat-foundry/nftdata/spacebear_1.json';
+        assertEq(spacebear.tokenURI(0), expectedTokenURI);
     }
 
     function testMintTokenNotOwner() public {
-        vm.startPrank(address(0x1));
+        address notOwnerAddress = address(0x1);
+        vm.startPrank(notOwnerAddress);
         vm.expectRevert('Ownable: caller is not the owner');
-        spacebear.safeMint(address(0x1), 'spacebear_1.json');
+        spacebear.safeMint(notOwnerAddress, 'spacebear_1.json');
         vm.stopPrank();
     }
 }
