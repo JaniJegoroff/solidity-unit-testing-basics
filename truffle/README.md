@@ -18,13 +18,13 @@ Truffle installed: https://github.com/trufflesuite/truffle
 ### Install dependencies
 
 ```
-$ npm install
+npm install
 ```
 
 ### Run unit tests
 
 ```
-$ npm run test
+npm run test
 ```
 Example
 ```
