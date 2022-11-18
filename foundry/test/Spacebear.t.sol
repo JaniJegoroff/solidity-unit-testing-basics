@@ -43,4 +43,11 @@ contract SpacebearTest is Test {
         spacebear.transferFrom(notOwnerAddress, msg.sender, 0);
         vm.stopPrank();
     }
+
+    function testTokenTransferInvalidTokenId() public {
+        spacebear.safeMint(msg.sender, 'spacebear_1.json');
+
+        vm.expectRevert('ERC721: invalid token ID');
+        spacebear.transferFrom(msg.sender, msg.sender, 99);
+    }
 }
