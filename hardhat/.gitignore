@@ -1,6 +1,8 @@
-node_modules
+.etherscan
+.infura
+.secret
+
 artifacts
 cache
-.secret
-.infura
-.etherscan
+coverage*
+node_modules
