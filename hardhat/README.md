@@ -34,15 +34,17 @@ You are using a version of Node.js that is not supported by Hardhat, and it may 
 Please, make sure you are using a supported version of Node.js.
 
 To learn more about which versions of Node.js are supported go to https://hardhat.org/nodejs-versions
+Compiled 14 Solidity files successfully
 
 
   Spacebear
-    ✔ should return contract name (1654ms)
+    ✔ should return contract name (1736ms)
     ✔ should return token URI
     ✔ should mint a token
-    ✔ should fail to mint a token (104ms)
+    ✔ should fail to mint a token (92ms)
     ✔ should fail to transfer tokens from a wrong address
+    ✔ should fail to transfer token with invalid token id
 
 
-  5 passing (2s)
+  6 passing (2s)
 ```
