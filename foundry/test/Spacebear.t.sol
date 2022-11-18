@@ -33,4 +33,14 @@ contract SpacebearTest is Test {
         spacebear.safeMint(notOwnerAddress, 'spacebear_1.json');
         vm.stopPrank();
     }
+
+    function testTokenTransferFromNotOwnerAddress() public {
+        spacebear.safeMint(msg.sender, 'spacebear_1.json');
+
+        address notOwnerAddress = address(0x1);
+        vm.startPrank(notOwnerAddress);
+        vm.expectRevert('ERC721: caller is not token owner or approved');
+        spacebear.transferFrom(notOwnerAddress, msg.sender, 0);
+        vm.stopPrank();
+    }
 }
