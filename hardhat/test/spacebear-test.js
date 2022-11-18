@@ -32,6 +32,17 @@ describe('Spacebear', () => {
     expect(await spacebearInstance.ownerOf(0)).to.equal(otherAccount.address);
   });
 
+  it('should fail to mint a token', async () => {
+    const Spacebear = await hre.ethers.getContractFactory('Spacebear');
+    const spacebearInstance = await Spacebear.deploy();
+    const [_owner, otherAccount] = await ethers.getSigners();
+
+    const msg = 'Ownable: caller is not the owner';
+    await expect(spacebearInstance
+      .connect(otherAccount)
+      .safeMint(otherAccount.address, 'spacebear_1.json')).to.be.revertedWith(msg);
+  });
+
   it('should fail to transfer tokens from a wrong address', async () => {
     const { spacebearInstance } = await loadFixture(deploySpacebearAndMintTokenFixture);
     const [_owner, nftOwnerAccount, notNftOwnerAccount] = await ethers.getSigners();

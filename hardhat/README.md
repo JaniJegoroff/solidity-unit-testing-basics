@@ -37,11 +37,12 @@ To learn more about which versions of Node.js are supported go to https://hardha
 
 
   Spacebear
-    ✔ should return contract name (1686ms)
+    ✔ should return contract name (1654ms)
     ✔ should return token URI
     ✔ should mint a token
-    ✔ should fail to transfer tokens from a wrong address (63ms)
+    ✔ should fail to mint a token (104ms)
+    ✔ should fail to transfer tokens from a wrong address
 
 
-  4 passing (2s)
+  5 passing (2s)
 ```
