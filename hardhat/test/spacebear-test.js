@@ -54,4 +54,14 @@ describe('Spacebear', () => {
       .connect(notNftOwnerAccount)
       .transferFrom(nftOwnerAccount.address, notNftOwnerAccount.address, 0)).to.be.revertedWith(msg);
   });
+
+  it('should fail to transfer token with invalid token id', async () => {
+    const { spacebearInstance } = await loadFixture(deploySpacebearAndMintTokenFixture);
+    const [owner] = await ethers.getSigners();
+
+    const msg = 'ERC721: invalid token ID';
+    await expect(spacebearInstance
+      .connect(owner)
+      .transferFrom(owner.address, owner.address, 99)).to.be.revertedWith(msg);
+  });
 });
