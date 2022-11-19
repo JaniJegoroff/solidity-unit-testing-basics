@@ -49,9 +49,10 @@ Compiling your contracts...
 
   Contract: Spacebear
     ✔ should return contract name
-    ✔ should credit token to a correct account (93ms)
-    ✔ should return token URI (73ms)
+    ✔ should mint a token (74ms)
+    ✔ should return token URI (70ms)
+    ✔ should fail to transfer tokens from a wrong address (398ms)
 
 
-  3 passing (356ms)
+  4 passing (703ms)
 ```
