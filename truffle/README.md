@@ -49,10 +49,11 @@ Compiling your contracts...
 
   Contract: Spacebear
     ✔ should return contract name
-    ✔ should mint a token (74ms)
-    ✔ should return token URI (70ms)
-    ✔ should fail to transfer tokens from a wrong address (398ms)
+    ✔ should mint a token (84ms)
+    ✔ should return token URI (71ms)
+    ✔ should fail to transfer token from a wrong address (429ms)
+    ✔ should fail to transfer token with invalid token id (107ms)
 
 
-  4 passing (703ms)
+  5 passing (858ms)
 ```
