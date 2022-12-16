@@ -4,7 +4,7 @@
 
 ```
 macOS Monterey
-12.6.2
+12.6.3
 ```
 ```
 node -v
