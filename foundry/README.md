@@ -4,11 +4,11 @@
 
 ```
 macOS Monterey
-12.6.2
+12.6.3
 ```
 ```
 node -v
-v19.1.0
+v19.2.0
 ```
 
 ### Prerequisites
