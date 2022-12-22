@@ -51,9 +51,9 @@ Compiling your contracts...
     ✔ should return contract name
     ✔ should mint a token (84ms)
     ✔ should return token URI (71ms)
-    ✔ should fail to transfer token from a wrong address (429ms)
-    ✔ should fail to transfer token with invalid token id (107ms)
+    ✔ should fail to transfer token from a wrong address (356ms)
+    ✔ should fail to transfer token with invalid token id (81ms)
 
 
-  5 passing (858ms)
+  5 passing (820ms)
 ```
