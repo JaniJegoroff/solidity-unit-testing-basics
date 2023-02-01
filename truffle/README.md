@@ -8,7 +8,7 @@ macOS Monterey
 ```
 ```
 node -v
-v19.4.0
+v19.5.0
 ```
 
 ### Prerequisites
