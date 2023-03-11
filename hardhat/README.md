@@ -4,11 +4,11 @@
 
 ```
 macOS Monterey
-12.6.3
+12.6.4
 ```
 ```
 node -v
-v19.4.0
+v19.7.0
 ```
 
 ### Prerequisites
@@ -29,22 +29,19 @@ npx hardhat test
 Example
 ```
 Janis-MBP:hardhat janijegoroff$ npx hardhat test
-You are using a version of Node.js that is not supported by Hardhat, and it may work incorrectly, or not work at all.
+WARNING: You are using a version of Node.js that is not supported, and it may work incorrectly, or not work at all. See https://hardhat.org/nodejs-versions
 
-Please, make sure you are using a supported version of Node.js.
 
-To learn more about which versions of Node.js are supported go to https://hardhat.org/nodejs-versions
-Compiled 14 Solidity files successfully
 
 
   Spacebear
-    ✔ should return contract name (1736ms)
-    ✔ should return token URI
-    ✔ should mint a token
-    ✔ should fail to mint a token (92ms)
-    ✔ should fail to transfer tokens from a wrong address
-    ✔ should fail to transfer token with invalid token id
+    ✔ should return contract name (2603ms)
+    ✔ should return token URI (74ms)
+    ✔ should mint a token (41ms)
+    ✔ should fail to mint a token (131ms)
+    ✔ should fail to transfer tokens from a wrong address (79ms)
+    ✔ should fail to transfer token with invalid token id (48ms)
 
 
-  6 passing (2s)
+  6 passing (3s)
 ```
