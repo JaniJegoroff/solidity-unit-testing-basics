@@ -5,17 +5,17 @@
   "private": true,
   "description": "Basic smart contract unit testing using Truffle.",
   "devDependencies": {
-    "@openzeppelin/contracts": "^4.8.1",
+    "@openzeppelin/contracts": "^4.8.2",
     "@openzeppelin/test-helpers": "^0.5.16",
-    "ganache": "^7.7.3",
-    "truffle": "^5.7.4",
+    "ganache": "^7.7.6",
+    "truffle": "^5.8.0",
     "truffle-assertions": "^0.9.2",
-    "truffle-plugin-verify": "^0.6.1"
+    "truffle-plugin-verify": "^0.6.2"
   },
   "scripts": {
     "test": "truffle test"
   },
   "dependencies": {
-    "@truffle/hdwallet-provider": "^2.1.5"
+    "@truffle/hdwallet-provider": "^2.1.8"
   }
 }

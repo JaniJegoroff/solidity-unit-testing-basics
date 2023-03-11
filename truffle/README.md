@@ -4,11 +4,11 @@
 
 ```
 macOS Monterey
-12.6.3
+12.6.4
 ```
 ```
 node -v
-v19.5.0
+v19.7.0
 ```
 
 ### Prerequisites
@@ -49,11 +49,11 @@ Compiling your contracts...
 
   Contract: Spacebear
     ✔ should return contract name
-    ✔ should mint a token (84ms)
-    ✔ should return token URI (71ms)
-    ✔ should fail to transfer token from a wrong address (356ms)
-    ✔ should fail to transfer token with invalid token id (81ms)
+    ✔ should mint a token (106ms)
+    ✔ should return token URI (117ms)
+    ✔ should fail to transfer token from a wrong address (676ms)
+    ✔ should fail to transfer token with invalid token id (162ms)
 
 
-  5 passing (820ms)
+  5 passing (1s)
 ```
